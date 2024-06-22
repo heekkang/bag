@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="news.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>오늘의 재미있는 지식</title>
+    <script>
+      window.onload = function () {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // 시간, 분, 초를 두 자리 숫자로 표시하기 위해 10보다 작을 경우 0을 앞에 추가
+        hours = (hours < 10 ? "0" : "") + hours;
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+
+        // 현재 시간을 출력할 요소 가져오기
+        var timeElement = document.getElementById("time");
+
+        // 현재 시간을 HTML에 표시
+        timeElement.innerHTML = hours + ":" + minutes + ":" + seconds;
+      };
+    </script>
+  </head>
+  <body>
+    
+    <h1>재미있는 지식</h1>
+
+    
+    <div>본 내용은 네이버의 재미있는 지식 서비스의 크롤링입니다.</div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(19, 255, 62);
+}
+
+h1 {
+  position: relative;
+  text-align: left;
+  margin: 0;
+  padding: 30px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.container {
+  padding: 10px;
+}
+
+#box {
+  position: absolute;
+  width: 230px;
+  height: 80px;
+  left: 2vw;
+  bottom: 200px;
+  padding: 18px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  animation: 15s linear 1s infinite alternate move;
+  border: 1px solid black;
+  line-height: 22px;
+}
+
+
+@keyframes move {
+  from {
+    /* 태양을 뷰포트 너머로 밀어냅니다. */
+    transform: translateX(2vw);
+  }
+  to {
+    /* 태양을 기본 위치로 되돌립니다. */
+    transform: translateX(80vw);
+  }
+}
+
+
+a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 35px;
+  text-decoration-line: none;
+  color: rgb(0, 0, 0);
+  
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px  rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.line{
+  margin: 20px;
+}
