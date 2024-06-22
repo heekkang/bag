@@ -1,0 +1,101 @@
+/* 개별 화면 css 시작*/
+
+.page {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 20px;
+  overflow: hidden;
+}
+
+.left {
+  margin-left: 10px;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+
+}
+
+.right {
+  margin-right: 10px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll{
+  height: 86vh;
+  overflow: scroll;
+}
+
+.top {
+  position: relative;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  height: 10vh;
+}
+
+.title {
+  font-size: 1.7em;
+  font-weight: 500;
+  margin-block-start: 0.01em;
+  margin-block-end: 0.1em;
+}
+
+.minititle{
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-block-start: 0.01em;
+  margin-block-end: 0.1em;
+
+}
+.numberTop {
+  color: grey;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.5em;
+  text-align: right;
+}
+
+.two {
+  width: 100%;
+  height: auto;
+  
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.one {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.exp {
+  font-size: 0.7em;
+  line-height: 1.7em;
+}
+
+text {
+  padding: 10px;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 1em;
+  font-size: 0.7em;
+  line-height: 1.7em;
+}
+
+
+
+.line-top {
+  border-top: 1px solid #444444;
+
+  margin: 10px 0px;
+}

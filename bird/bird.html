@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="bird.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="line headerButton" id="main">서울에서 볼 수 있는 새</div>
+      <div></div>
+      <div class="line headerButton" id="about">정보</div>
+      <div class="line headerButton" id="category">카테고리</div>
+    </header>
+    <div class="gallery">
+      <div
+        class="card"
+        id="jik"
+        style="
+          width: 100%;
+          height: 20vh;
+          background-image: url('프로필/직박구리.webp');
+        "
+      ></div>
+      <div
+        class="card"
+        id="kka"
+        style="
+          width: 99.5%;
+          height: 20vh;
+
+          background-image: url('프로필/까치.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="cham"
+        style="
+          width: 99.1%;
+          height: 20vh;
+
+          background-image: url('프로필/참새.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="park"
+        style="
+          width: 79.8%;
+          height: 20vh;
+
+          background-image: url('프로필/박새.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="met"
+        style="
+          width: 64.8%;
+          height: 20vh;
+
+          background-image: url('프로필/멧비둘기.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="spark"
+        style="
+          width: 50.1%;
+          height: 20vh;
+
+          background-image: url('프로필/쇠박새.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="red"
+        style="
+          width: 41.8%;
+          height: 20vh;
+
+          background-image: url('프로필/붉은머리오목눈이.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="gg"
+        style="
+          width: 36.8%;
+          height: 20vh;
+
+          background-image: url('프로필/꾀꼬리.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="qung"
+        style="
+          width: 31.3%;
+          height: 20vh;
+
+          background-image: url('프로필/꿩.jpeg');
+        "
+      ></div>
+      <div
+        class="card"
+        id="jip"
+        style="
+          width: 30.8%;
+          height: 20vh;
+
+          background-image: url('프로필/집비둘기.jpeg');
+        "
+      ></div>
+    </div>
+    <img
+      src="자산 1.svg"
+      alt=""
+      class="blocker"
+      style="
+        position: fixed;
+        height: 650px;
+        width: auto;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      "
+    />
+    <footer></footer>
+    <script>
+      var category = document.getElementById("category");
+      var jik = document.getElementById("jik");
+      var kka = document.getElementById("kka");
+      var cham = document.getElementById("cham");
+      var park = document.getElementById("park");
+      var met = document.getElementById("met");
+      var isColored = false;
+
+// 클릭 이벤트 핸들러 함수 정의
+function toggleBackgroundColor(element) {
+    if (isColored) {
+      element.style.backgroundColor = "white";
+    } else {
+      // 각 div에 대해 다른 색상 설정
+      switch(element.id) {
+        case "jik":
+          element.style.backgroundColor = "green";
+          break;
+        case "kka":
+          element.style.backgroundColor = "lime";
+          break;
+        case "cham":
+          element.style.backgroundColor = "lime";
+          break;
+        case "park":
+          element.style.backgroundColor = "green";
+          break;
+        case "met":
+          element.style.backgroundColor = "green";
+          break;
+      }
+    }
+  }
+
+// 각 div에 대한 클릭 이벤트 처리
+jik.addEventListener("click", function() {
+  toggleBackgroundColor(jik);
+});
+
+kka.addEventListener("click", function() {
+  toggleBackgroundColor(kka);
+});
+
+cham.addEventListener("click", function() {
+  toggleBackgroundColor(cham);
+});
+
+park.addEventListener("click", function() {
+  toggleBackgroundColor(park);
+});
+
+met.addEventListener("click", function() {
+  toggleBackgroundColor(met);
+});
+
+// 카테고리 클릭 이벤트 처리
+category.addEventListener("click", function() {
+  // isColored 변수를 토글하여 상태 변경
+  isColored = !isColored;
+
+  // 모든 div에 대해 배경색 변경
+  toggleBackgroundColor(jik);
+  toggleBackgroundColor(kka);
+  toggleBackgroundColor(cham);
+  toggleBackgroundColor(park);
+  toggleBackgroundColor(met);
+});
+    </script>
+  </body>
+</html>
